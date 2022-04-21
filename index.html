@@ -1,5 +1,9 @@
 <!doctype html>
 <html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -37,7 +41,7 @@ const materials = [
 const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
 cube.position.set(1, 1, 1);
 scene.add(cube);
-}
+
 
 // Set up the WebGLRenderer, which handles rendering to the session's base layer.
 const renderer = new THREE.WebGLRenderer({
@@ -91,7 +95,10 @@ const onXRFrame = (time, frame) => {
     renderer.render(scene, camera)
   }
 }
+
+
 session.requestAnimationFrame(onXRFrame);
+}
 </script>
 </body>
 </html>
