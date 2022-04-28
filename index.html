@@ -36,19 +36,19 @@ async function activateXR() {
   scene.add(directionalLight);
 
 // The cube will have a different color on each side.
-//const materials = [
-  //new THREE.MeshBasicMaterial({color: 0xff0000}),
-  //new THREE.MeshBasicMaterial({color: 0x0000ff}),
-  //new THREE.MeshBasicMaterial({color: 0x00ff00}),
-  //new THREE.MeshBasicMaterial({color: 0xff00ff}),
-  //new THREE.MeshBasicMaterial({color: 0x00ffff}),
-  //new THREE.MeshBasicMaterial({color: 0xffff00})
-//];
+const materials = [
+  new THREE.MeshBasicMaterial({color: 0xff0000}),
+  new THREE.MeshBasicMaterial({color: 0x0000ff}),
+  new THREE.MeshBasicMaterial({color: 0x00ff00}),
+  new THREE.MeshBasicMaterial({color: 0xff00ff}),
+  new THREE.MeshBasicMaterial({color: 0x00ffff}),
+  new THREE.MeshBasicMaterial({color: 0xffff00})
+];
 
 // Create the cube and add it to the demo scene.
-//const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
-//cube.position.set(1, 1, 1);
-//scene.add(cube);
+const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
+cube.position.set(1, 1, 1);
+scene.add(cube);
 
 
 // Set up the WebGLRenderer, which handles rendering to the session's base layer.
@@ -89,7 +89,7 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
 })
 
 let flower;
-loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
+loader.load("https://github.com/cb1140/webxr-short-example/blob/main/donut.gltf", function(gltf) {
   flower = gltf.scene;
 });
 session.addEventListener("select", (event) => {
