@@ -88,13 +88,13 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
   scene.add(reticle);
 })
 
-let flower;
+let donut;
 loader.load("https://github.com/cb1140/webxr-short-example/blob/main/donut.gltf", function(gltf) {
-  flower = gltf.scene;
+  donut = gltf.scene;
 });
 session.addEventListener("select", (event) => {
-  if (flower) {
-    const clone = flower.clone();
+  if (donut) {
+    const clone = donut.clone();
     clone.position.copy(reticle.position);
     scene.add(clone);
   }
